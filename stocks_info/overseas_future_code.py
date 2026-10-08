@@ -10,7 +10,6 @@ base_dir = os.getcwd()
 
 def get_overseas_future_master_dataframe(base_dir):
 
-    ssl._create_default_https_context = ssl._create_unverified_context
     urllib.request.urlretrieve("https://new.real.download.dws.co.kr/common/master/ffcode.mst.zip", base_dir + "\\ffcode.mst.zip")
     os.chdir(base_dir)
 

@@ -25,7 +25,6 @@ base_dir = os.getcwd()
 
 def get_overseas_master_dataframe(base_dir,val):
 
-    ssl._create_default_https_context = ssl._create_unverified_context
     # urllib.request.urlretrieve(f"https://new.real.download.dws.co.kr/common/master/{val}mst.cod.zip", base_dir + f"\\{val}mst.cod.zip")
     urllib.request.urlretrieve(f"https://new.real.download.dws.co.kr/common/master/{val}mst.cod.zip", os.path.join(base_dir, f"{val}mst.cod.zip"))
     os.chdir(base_dir)

@@ -12,7 +12,6 @@ def kosdaq_master_download(base_dir, verbose=False):
 
     cwd = os.getcwd()
     if (verbose): print(f"current directory is {cwd}")
-    ssl._create_default_https_context = ssl._create_unverified_context
     
     urllib.request.urlretrieve("https://new.real.download.dws.co.kr/common/master/kosdaq_code.mst.zip",
                                base_dir + "\\kosdaq_code.zip")

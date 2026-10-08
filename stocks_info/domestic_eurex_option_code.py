@@ -13,7 +13,6 @@ def get_domestic_eurex_option_master_dataframe(base_dir):
     # download file
     print("Downloading...")
 
-    ssl._create_default_https_context = ssl._create_unverified_context
     urllib.request.urlretrieve("https://new.real.download.dws.co.kr/common/master/fo_eurex_code.mst.zip", base_dir + "\\fo_eurex_code.mst.zip")
     os.chdir(base_dir)
 

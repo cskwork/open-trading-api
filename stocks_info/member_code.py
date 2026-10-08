@@ -11,7 +11,6 @@ base_dir = os.getcwd()
 def download_file(url, output_dir, filename):
     # 파일 다운로드
     print(f"Downloading {filename}...")
-    ssl._create_default_https_context = ssl._create_unverified_context
     filepath = os.path.join(output_dir, filename)
     urllib.request.urlretrieve(url, filepath)
     return filepath

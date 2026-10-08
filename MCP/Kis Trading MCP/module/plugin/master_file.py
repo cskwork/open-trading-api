@@ -588,7 +588,6 @@ class MasterFileManager:
             import ssl
 
             # SSL 컨텍스트 설정 (한국투자증권 서버용)
-            ssl._create_default_https_context = ssl._create_unverified_context
 
             response = requests.get(url, timeout=60)  # 대용량 파일을 위해 타임아웃 증가
             response.raise_for_status()

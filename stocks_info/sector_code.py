@@ -8,7 +8,6 @@ base_dir = os.getcwd()
 
 def get_sector_master_dataframe(base_dir):
 
-    ssl._create_default_https_context = ssl._create_unverified_context
     urllib.request.urlretrieve("https://new.real.download.dws.co.kr/common/master/idxcode.mst.zip", base_dir + "\\idxcode.zip")
     os.chdir(base_dir)
 

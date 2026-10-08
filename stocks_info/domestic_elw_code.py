@@ -11,7 +11,6 @@ base_dir = os.getcwd()
 def download_and_extract_file(url, output_dir, zip_filename, extracted_filename):
     # Download the file
     print(f"Downloading {zip_filename}...")
-    ssl._create_default_https_context = ssl._create_unverified_context
     zip_filepath = os.path.join(output_dir, zip_filename)
     urllib.request.urlretrieve(url, zip_filepath)
     
